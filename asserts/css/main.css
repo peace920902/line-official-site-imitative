@@ -1,0 +1,431 @@
+a {
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+}
+
+li {
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+#header {
+  font: 20px;
+  width: 100%;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  background-color: #fff;
+  opacity: 0.9;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+  z-index: 3;
+}
+
+#header .logo {
+  width: 45px;
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+#header .logo img {
+  display: block;
+  width: 100%;
+}
+
+#header nav ul {
+  display: flex;
+}
+
+#header nav ul li {
+  font-size: 20px;
+  font-weight: 900;
+  border-bottom: 5px solid transparent;
+  /* margin-right: 20px; */
+}
+
+#header nav ul li.current {
+  border-bottom-color: #000;
+}
+
+#header nav ul li + li {
+  margin-left: 80px;
+}
+
+#header nav a {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+#header .lang {
+  margin-right: 30px;
+}
+
+#header .lang a {
+  display: flex;
+  align-items: center;
+}
+
+#header .lang a::after {
+  content: "";
+  border-top: 3px solid #000;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  border-bottom: 0px;
+}
+
+.banner {
+  background-image: url("../imgs/mv01.jpg");
+  display: flex;
+  height: calc(100vh);
+  justify-content: center;
+  align-items: center;
+}
+
+.banner .text {
+  color: #fff;
+}
+
+.banner .text h2 {
+  font-size: 150px;
+}
+
+.banner .text h3 {
+  font-size: 50px;
+}
+
+.slogan {
+  margin-top: 100px;
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+.slogan h2 {
+  font-size: 72px;
+  margin-bottom: 30px;
+}
+
+.slogan h3 {
+  color: rgb(83, 83, 83);
+}
+
+/* main-service */
+#main-service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#main-service .service {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 600px;
+  position: relative;
+}
+
+#main-service .service:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+
+#main-service .service::after {
+  content: "";
+  position: absolute;
+  box-sizing: border-box;
+  border-left: 1px dashed #aaa;
+  display: block;
+  left: 50%;
+  width: 1px;
+  height: calc(100% - 10px);
+  z-index: -1;
+  float: left;
+}
+
+#main-service .service::before {
+  content: "";
+  position: absolute;
+  left: calc(50% - 2px);
+  top: 0;
+  display: block;
+  width: 5px;
+  height: 5px;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+#main-service .service .photo,
+#main-service .service .text-wrap {
+  width: 45%;
+}
+
+#main-service .service .photo img {
+  width: 100%;
+}
+
+#main-service .service .text-wrap {
+  display: flex;
+}
+
+#main-service .service:nth-child(even) .text-wrap {
+  justify-content: flex-end;
+}
+
+#main-service .service .text-wrap .description .icon {
+  width: 80px;
+  height: 80px;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+}
+
+#main-service .service .text-wrap .description .icon img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+#main-service .service .text-wrap .description {
+  width: 75%;
+}
+
+#main-service .service:nth-child(odd) .text-wrap .description {
+  margin-right: 30px;
+}
+
+#main-service .service:nth-child(even) .text-wrap .description {
+  margin-left: 30px;
+}
+
+#main-service .service .text-wrap .description h3 {
+  font-size: 40px;
+  margin: 15px 0;
+}
+
+#main-service .service .text-wrap .description h4 {
+  color: green;
+  font-size: 20px;
+}
+
+#main-service .service .text-wrap .description p {
+  font-size: 20px;
+  color: rgb(83, 83, 83);
+  line-height: 1.5em;
+}
+
+#main-service .service .text-wrap .description .details ul {
+  padding: 0;
+}
+
+#main-service .service .text-wrap .description .details a {
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+/* communication */
+#communication {
+  background-color: #eee;
+  padding-top: 100px;
+}
+
+#communication {
+  text-align: center;
+}
+
+#communication h2 {
+  font-size: 72px;
+}
+
+#communication > p {
+  font-size: 28px;
+  color: rgb(83, 83, 83);
+}
+
+#communication .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 10% 10%;
+}
+
+#communication .wrap .service {
+  width: 30%;
+  padding-right: 50px;
+  padding-bottom: 30px;
+}
+
+#communication .wrap .service:nth-child(3n + 3) {
+  padding-right: 0;
+}
+
+#communication .wrap .service img {
+  width: 100%;
+}
+
+#communication .wrap .service h3 {
+  font-size: 28px;
+  margin: 25px 0 15px;
+}
+
+#communication .wrap .service p {
+  font-size: 16px;
+  line-height: 2em;
+  padding: 0 25px;
+}
+
+/* business-banner */
+.business-banner a {
+  display: block;
+  width: 100%;
+  position: relative;
+}
+
+.business-banner a h2 {
+  color: #fff;
+  width: 100%;
+  display: block;
+  text-align: center;
+  position: absolute;
+  font-size: 60px;
+  top: calc(50% - 0.5em);
+}
+
+.business-banner a img {
+  display: block;
+  width: 100%;
+}
+
+/* all-service */
+#all-service {
+  padding-top: 200px;
+  background-color: #eee;
+  padding-bottom: 200px;
+}
+
+#all-service h2 {
+  font-size: 72px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+#all-service .container {
+  display: flex;
+}
+#all-service .container .menu {
+  width: 15%;
+  display: inline-block;
+  margin-left: 10%;
+}
+
+#all-service .menu button {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #aaa;
+}
+
+#all-service .container .menu ul li:not(:first-child) {
+  margin-top: 15px;
+}
+
+#all-service .container .wrap {
+  width: 75%;
+  display: inline-block;
+}
+
+#all-service .wrap ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#all-service .wrap ul li {
+  width: 300px;
+  height: 350px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  position: relative;
+  padding: 30px 30px 0;
+  box-sizing: border-box;
+}
+
+#all-service .wrap ul li::after {
+  content: "\30FB\30FB\30FB";
+  position: absolute;
+  bottom: 25px;
+  left: 25px;
+  letter-spacing: -15px;
+  font-size: 25px;
+  color: #777;
+}
+
+#all-service .wrap ul li:not(:nth-child(3n + 1)) {
+  margin-left: 50px;
+}
+
+#all-service .wrap ul li h3 {
+  font-size: 26px;
+  margin: 0.5em 0;
+}
+
+#all-service .wrap ul li p {
+  color: rgb(83, 83, 83);
+}
+
+/* footer */
+#footer {
+  display: flex;
+  justify-content: center;
+}
+
+#footer .wrap {
+  border-bottom: 1px solid #ccc;
+  width: calc(100% - 400px);
+}
+
+#footer ul li + li:before {
+  content: "|";
+  margin: 0 10px;
+  color: #ccc;
+}
+
+#footer .download {
+  display: flex;
+  align-items: center;
+  margin: 25px 0;
+}
+
+#footer .download .icon img {
+  border-radius: 5px;
+}
+
+#footer .download ul {
+  padding-left: 3px;
+  display: flex;
+}
+
+#footer .download li {
+}
+
+#footer .links {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ccc;
+  padding: 25px 0;
+}
+
+#footer .links .associate-link ul {
+  display: flex;
+  font-size: 14px;
+  font-weight: 1000;
+}
+
+#footer .links {
+}
